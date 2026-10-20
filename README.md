@@ -1,3 +1,14 @@
+Confirmación al eliminar una tarea
+<img width="1897" height="983" alt="image" src="https://github.com/user-attachments/assets/cfc70954-7502-47a9-a7a0-a8be6884755c" />
+
+Contador de tareas
+<img width="1837" height="758" alt="image" src="https://github.com/user-attachments/assets/e009efa8-d56d-49c1-b70c-02faecc768fe" />
+<img width="1848" height="447" alt="image" src="https://github.com/user-attachments/assets/aa99aece-cde8-4e55-bd78-52636f1c3cb3" />
+
+Validaciones y notificaciones
+<img width="1826" height="565" alt="image" src="https://github.com/user-attachments/assets/abd92383-3435-48da-a8b9-691075972f5f" />
+<img width="1833" height="556" alt="image" src="https://github.com/user-attachments/assets/020e531d-1935-44c6-97d6-50ac2a17cdfb" />
+
 Podemos buscar las tareas por " Titulo,Estado,Prioridad,Fecha limite"
 <img width="1842" height="763" alt="image" src="https://github.com/user-attachments/assets/8c16cc79-c7f3-4c25-a820-cfd95a369acf" />
 
