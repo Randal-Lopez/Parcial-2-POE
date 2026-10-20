@@ -1,3 +1,5 @@
+<img width="1875" height="952" alt="image" src="https://github.com/user-attachments/assets/e591a19a-e08e-4293-8999-05f42f0eb0d4" />
+
 Descripción del proyecto
 
 La aplicación web de Gestión de Tareas fue desarrollada en TypeScript como parte del segundo parcial, con el objetivo de facilitar el registro y la organización de tareas. Para cumplir con los requisitos solicitados, se agregaron diferentes funciones que permiten administrar las tareas de forma sencilla.
