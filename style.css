@@ -1,0 +1,335 @@
+/* Colores basados en el escudo de la UNIVO */
+:root {
+    --azul: #123F63;
+    --azul-oscuro: #0B2D49;
+    --dorado: #FFB900;
+    --blanco: #FFFFFF;
+}
+
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: var(--azul);
+    border: 2px solid var(--dorado);
+    border-radius: 16px;
+}
+
+header h1 {
+    color: var(--dorado);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: var(--blanco);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Tarjetas y secciones */
+.card,
+section,
+.formulario,
+.lista-tareas {
+    background-color: var(--azul);
+    border: 1px solid var(--dorado);
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 22px;
+}
+
+/* Títulos */
+h2,
+h3 {
+    color: var(--dorado);
+    margin-bottom: 18px;
+}
+
+h2 {
+    font-size: 1.35rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+/* Etiquetas */
+label {
+    display: block;
+    color: var(--blanco);
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+/* Campos de texto */
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    border: 2px solid var(--blanco);
+    border-radius: 8px;
+    background-color: var(--blanco);
+    color: var(--azul-oscuro);
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--dorado);
+    box-shadow: 0 0 0 3px var(--dorado);
+}
+
+/* Botones generales */
+button {
+    padding: 11px 17px;
+    border: 2px solid var(--dorado);
+    border-radius: 8px;
+    background-color: var(--dorado);
+    color: var(--azul-oscuro);
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--azul-oscuro);
+    color: var(--dorado);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Botón de cancelar */
+button.cancelar,
+.btn-cancelar {
+    background-color: var(--azul);
+    color: var(--blanco);
+    border-color: var(--blanco);
+}
+
+button.cancelar:hover,
+.btn-cancelar:hover {
+    background-color: var(--dorado);
+    color: var(--azul-oscuro);
+}
+
+/* Buscador y filtros */
+.filtros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    align-items: end;
+}
+
+.filtros input,
+.filtros select {
+    margin-bottom: 0;
+}
+
+/* Contador de tareas */
+#contadorTareas,
+.contador {
+    color: var(--dorado);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 18px;
+}
+
+/* Lista de tareas */
+ul {
+    list-style: none;
+}
+
+li {
+    background-color: var(--azul-oscuro);
+    border: 1px solid var(--dorado);
+    border-left: 5px solid var(--dorado);
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 14px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+li:hover {
+    transform: translateX(4px);
+    border-color: var(--blanco);
+}
+
+/* Título de la tarea */
+li h3,
+li strong {
+    color: var(--dorado);
+}
+
+/* Descripción de la tarea */
+li p {
+    color: var(--blanco);
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+/* Datos de la tarea */
+li small,
+li span {
+    color: var(--blanco);
+}
+
+/* Prioridades */
+.prioridad-alta {
+    border-left-color: var(--dorado);
+}
+
+.prioridad-media {
+    border-left-color: var(--blanco);
+}
+
+.prioridad-baja {
+    border-left-color: var(--azul);
+}
+
+/* Tareas completadas */
+li.completada {
+    opacity: 0.7;
+}
+
+li.completada h3,
+li.completada strong {
+    text-decoration: line-through;
+}
+
+/* Tareas vencidas */
+li.vencida {
+    border: 2px solid var(--dorado);
+    border-left: 6px solid var(--dorado);
+}
+
+li.vencida::before {
+    content: "TAREA VENCIDA";
+    display: inline-block;
+    color: var(--azul-oscuro);
+    background-color: var(--dorado);
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/* Botones dentro de las tareas */
+li button {
+    margin: 8px 5px 0 0;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    accent-color: var(--dorado);
+    cursor: pointer;
+}
+
+/* Mensajes y notificaciones */
+.mensaje,
+.notificacion {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--dorado);
+    border-radius: 8px;
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+}
+
+/* Mensaje cuando no hay tareas */
+.vacio {
+    text-align: center;
+    padding: 30px 15px;
+    color: var(--blanco);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    color: var(--blanco);
+    border-top: 2px solid var(--dorado);
+    font-size: 0.9rem;
+}
+
+footer span,
+footer strong {
+    color: var(--dorado);
+}
+
+/* Diseño para teléfonos */
+@media (max-width: 600px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    header {
+        padding: 20px 12px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .card,
+    section,
+    .formulario,
+    .lista-tareas {
+        padding: 16px;
+    }
+
+    .filtros {
+        grid-template-columns: 1fr;
+    }
+
+    li {
+        padding: 14px;
+    }
+
+    li button {
+        width: 100%;
+        margin: 6px 0;
+    }
+}

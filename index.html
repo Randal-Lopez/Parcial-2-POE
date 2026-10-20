@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de tareas</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="contenedor">
+        <header class="encabezado">
+            <div>
+                <h1>Gestión de tareas</h1>
+                <p>Organiza tus actividades y lleva el control de tus pendientes.</p>
+            </div>
+            <div class="contador" id="contador-tareas">Pendientes: 0</div>
+        </header>
+
+        <section class="panel">
+            <h2 id="titulo-formulario">Agregar tarea</h2>
+            <form id="form-tarea">
+                <input type="hidden" id="tarea-id">
+
+                <div class="campos">
+                    <label>
+                        Título
+                        <input type="text" id="titulo" maxlength="80" placeholder="Ej. Entregar laboratorio" required>
+                    </label>
+
+                    <label>
+                        Fecha límite
+                        <input type="date" id="fecha-limite" required>
+                    </label>
+
+                    <label>
+                        Prioridad
+                        <select id="prioridad" required>
+                            <option value="baja">Baja</option>
+                            <option value="media" selected>Media</option>
+                            <option value="alta">Alta</option>
+                        </select>
+                    </label>
+
+                    <label class="campo-completo">
+                        Descripción
+                        <textarea id="descripcion" maxlength="300" placeholder="Describe lo que tienes que hacer" required></textarea>
+                    </label>
+                </div>
+
+                <div class="acciones-formulario">
+                    <button type="submit" id="btn-guardar">Agregar tarea</button>
+                    <button type="button" id="btn-cancelar" class="secundario oculto">Cancelar edición</button>
+                </div>
+            </form>
+            <div id="notificaciones" class="notificaciones" aria-live="polite"></div>
+        </section>
+
+        <section class="panel">
+            <h2>Mis tareas</h2>
+            <div class="filtros">
+                <label>
+                    Buscar por título
+                    <input type="search" id="buscar" placeholder="Escribe el título...">
+                </label>
+                <label>
+                    Estado
+                    <select id="filtro-estado">
+                        <option value="todas">Todos los estados</option>
+                        <option value="pendientes">Pendientes</option>
+                        <option value="completadas">Completadas</option>
+                    </select>
+                </label>
+                <label>
+                    Prioridad
+                    <select id="filtro-prioridad">
+                        <option value="todas">Todas las prioridades</option>
+                        <option value="alta">Alta</option>
+                        <option value="media">Media</option>
+                        <option value="baja">Baja</option>
+                    </select>
+                </label>
+                <label>
+                    Ordenar por
+                    <select id="ordenar">
+                        <option value="fecha">Fecha límite</option>
+                        <option value="prioridad">Prioridad</option>
+                    </select>
+                </label>
+            </div>
+            <ul id="lista-tareas" class="lista-tareas"></ul>
+            <p id="sin-tareas" class="sin-tareas oculto">No hay tareas que coincidan con los filtros.</p>
+        </section>
+    </main>
+    <script type="module" src="./dist/App.js"></script>
+</body>
+</html>
