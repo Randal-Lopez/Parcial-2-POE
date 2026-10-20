@@ -1,3 +1,7 @@
+Podemos buscar las tareas por " Titulo,Estado,Prioridad,Fecha limite"
+<img width="1842" height="763" alt="image" src="https://github.com/user-attachments/assets/8c16cc79-c7f3-4c25-a820-cfd95a369acf" />
+
+Se puede actualizar o editar las tareas
 <img width="1875" height="952" alt="image" src="https://github.com/user-attachments/assets/e591a19a-e08e-4293-8999-05f42f0eb0d4" />
 
 Descripción del proyecto
