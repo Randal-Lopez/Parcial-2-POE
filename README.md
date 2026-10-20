@@ -1,75 +1,48 @@
-# Gestión de Tareas MVC — Parcial 2
+Descripción del proyecto
 
-## Descripción
-Aplicación web desarrollada en TypeScript para registrar y organizar tareas. Utiliza una estructura basada en MVC y guarda los datos en el almacenamiento local del navegador.
+La aplicación web de Gestión de Tareas fue desarrollada en TypeScript como parte del segundo parcial, con el objetivo de facilitar el registro y la organización de tareas. Para cumplir con los requisitos solicitados, se agregaron diferentes funciones que permiten administrar las tareas de forma sencilla.
 
-## Funcionalidades
-- Registrar tareas con título, descripción, fecha límite y prioridad.
-- Marcar tareas como completadas o pendientes.
-- Editar tareas existentes desde el formulario.
-- Eliminar tareas con confirmación.
-- Buscar por título.
-- Filtrar por estado y prioridad; los filtros y la búsqueda se combinan.
-- Ordenar por fecha límite o prioridad (alta, media y baja).
-- Guardar y cargar datos desde `localStorage`.
-- Mostrar el contador de tareas pendientes y el total.
-- Resaltar en rojo las tareas pendientes cuya fecha límite ya venció.
-- Validar campos vacíos, fecha límite, prioridad y títulos duplicados.
-- Mostrar notificaciones que se cierran automáticamente.
+Mejoras realizadas
 
-## Tecnologías
-HTML5, CSS3, TypeScript, JavaScript, Node.js y npm.
+Se incorporaron opciones para crear, editar y eliminar tareas, asignarles una fecha límite y establecer una prioridad alta, media o baja. También se pueden marcar como pendientes o completadas, buscar por título, filtrar por estado y prioridad al mismo tiempo, y ordenar por fecha límite o prioridad.
 
-## Estructura
-- `src/modelos/TareaModel.ts`: interfaz y modelo de las tareas, búsqueda y filtros.
-- `src/vistas/TareaUI.ts`: formulario, lista, edición, mensajes y contador.
-- `src/controladores/AppController.ts`: lógica de la aplicación y eventos.
-- `src/utilidades/StorageHelper.ts`: persistencia en `localStorage`.
-- `src/App.ts`: punto de entrada.
-- `index.html`: estructura de la página.
-- `style.css`: estilos.
+Además, el sistema muestra un contador de tareas pendientes y del total registrado, resalta en rojo las tareas vencidas y presenta notificaciones para informar sobre las acciones realizadas. También valida los campos obligatorios, evita títulos duplicados y solicita confirmación antes de eliminar una tarea.
 
-## Requisitos
-- Node.js y npm.
-- Visual Studio Code.
-- Extensión Live Server.
+Decisiones técnicas
 
-## Instalación y ejecución
-1. Abre esta carpeta en Visual Studio Code.
-2. Instala TypeScript y las dependencias:
+Para desarrollar el proyecto se mantuvo la estructura MVC, separando el código en modelos, vistas, controladores y utilidades. Esto permite tener una mejor organización y facilita el mantenimiento del sistema.
 
-   ```bash
-   npm install
-   ```
+Se utilizaron HTML5 para la estructura de la página, CSS3 para el diseño y TypeScript para la lógica de la aplicación. Para la interfaz se eligieron los colores azul marino, dorado y blanco, tomando como referencia los colores de la UNIVO.
 
-3. Compila el proyecto:
+Almacenamiento de datos
 
-   ```bash
-   npm run build
-   ```
+Para conservar la información se implementó localStorage, que permite guardar las tareas en el navegador y mantenerlas después de recargar la página, sin necesidad de utilizar una base de datos. Los datos permanecen guardados en el mismo navegador y origen donde se utiliza la aplicación.
 
-4. Abre `index.html` con Live Server.
+Estructura del proyecto
 
-Cada vez que modifiques archivos `.ts`, vuelve a ejecutar `npm run build` antes de recargar el navegador.
+El proyecto se organizó en varios archivos para separar las responsabilidades de cada parte:
 
-## Validaciones
-- El título y la descripción son obligatorios.
-- La fecha límite es obligatoria y no puede estar en el pasado.
-- No se permiten dos tareas con el mismo título, sin distinguir mayúsculas y minúsculas.
-- La prioridad debe ser alta, media o baja.
+TareaModel.ts: contiene el modelo de las tareas.
+TareaUI.ts: se encarga de mostrar el formulario, la lista y los mensajes.
+AppController.ts: controla la lógica y los eventos de la aplicación.
+StorageHelper.ts: administra el almacenamiento en localStorage.
+App.ts: funciona como punto de entrada del proyecto.
+index.html: contiene la estructura de la página.
+style.css: define los estilos de la interfaz.
+Instalación y ejecución
 
-## Persistencia
-Los datos se guardan en `localStorage` con la clave `tareas-parcial2`. Permanecen en el mismo navegador y origen después de recargar la página.
+Para ejecutar el proyecto se necesita Node.js, npm, Visual Studio Code y la extensión Live Server. Primero se abre la carpeta del proyecto en Visual Studio Code y se ejecuta el siguiente comando para instalar las dependencias:
 
-## Pruebas recomendadas
-1. Agregar una tarea y recargar la página.
-2. Intentar agregar otra tarea con el mismo título.
-3. Editar título, descripción, fecha y prioridad.
-4. Combinar una búsqueda con estado y prioridad.
-5. Ordenar por fecha y por prioridad.
-6. Marcar una tarea completada y comprobar el contador.
-7. Probar una tarea vencida (para probarlo, puedes cambiar temporalmente la fecha del sistema o quitar la validación de fecha pasada).
-8. Eliminar una tarea y cancelar/aceptar la confirmación.
+npm install
 
-## Capturas
-Agrega aquí capturas de pantalla de la aplicación funcionando antes de entregar el repositorio.
+Después, se compila el código TypeScript con:
+
+npm run build
+
+Finalmente, se abre el archivo index.html utilizando Live Server. Cada vez que se realicen cambios en los archivos .ts, es necesario volver a ejecutar npm run build antes de actualizar la página.
+
+Pruebas recomendadas
+
+Para comprobar el funcionamiento del sistema, se recomienda registrar tareas, editarlas y eliminarlas, probar las validaciones y verificar que no se permitan títulos duplicados. También se debe comprobar la búsqueda por título, la combinación de filtros, el ordenamiento por fecha y prioridad, el contador de tareas y la identificación visual de las tareas vencidas.
+
+Por último, se puede recargar la página para verificar que las tareas continúen guardadas en el navegador.
