@@ -123,8 +123,3 @@ Para comprobar el funcionamiento del sistema, se recomienda realizar las siguien
 6. Marcar una tarea como completada y comprobar que el contador se actualiza.
 7. Comprobar que las tareas vencidas se identifican visualmente.
 8. Intentar eliminar una tarea y probar las opciones de aceptar y cancelar la confirmación.
-
-## Autor
-
-Proyecto académico desarrollado para el segundo parcial de la asignatura, utilizando TypeScript y el patrón de arquitectura MVC.
-Por último, se puede recargar la página para verificar que las tareas continúen guardadas en el navegador.
